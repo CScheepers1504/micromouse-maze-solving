@@ -1,0 +1,208 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   27 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "init_FWD_RIGHT"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "init_FWD_RIGHT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "init_FWD_LEFT"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "init_FWD_LEFT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "DOWN_L_LIGHT"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "DOWN_L_LIGHT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "DOWN_R_DARK"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "DOWN_R_DARK"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "DOWN_L_DARK"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "DOWN_L_DARK"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "DOWN_R_LIGHT"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "DOWN_R_LIGHT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "counter"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "counter"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "sum_FWD_LEFT"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "sum_FWD_LEFT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "sum_FWD_RIGHT"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "sum_FWD_RIGHT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "sum_LEFT"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "sum_LEFT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "sum_RIGHT"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "sum_RIGHT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "counter2"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "counter2"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "R"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "R"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "SolvedAlgorithm"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "SolvedAlgorithm"\
+      SrcLocation  ""\
+      Dimensions   [1,100]\
+    }\
+    ChartData {\
+      Name         "B"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "B"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "checking"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "checking"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "index"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "index"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "L"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "L"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "next"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "next"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "solved"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "solved"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "S"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "S"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_active_c2_HalfOptimized2"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_c2_HalfOptimized2"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_LineFollowing"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "LineFollowing"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Optimised"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Optimised"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Turns"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Turns"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

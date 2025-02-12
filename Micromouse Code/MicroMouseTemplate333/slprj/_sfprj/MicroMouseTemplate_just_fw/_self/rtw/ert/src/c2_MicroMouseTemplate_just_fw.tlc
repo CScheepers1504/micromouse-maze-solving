@@ -1,0 +1,158 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   20 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "motor_speed_left"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "motor_speed_left"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "motor_speed_right"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "motor_speed_right"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "dark_val_l"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "dark_val_l"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "dark_val_r"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "dark_val_r"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "light_val_l"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "light_val_l"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "light_val_r"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "light_val_r"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "thresh_down_l"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "thresh_down_l"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "thresh_down_r"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "thresh_down_r"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "init_FWD_LEFT"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "init_FWD_LEFT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "init_FWD_RIGHT"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "init_FWD_RIGHT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "init_LEFT"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "init_LEFT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "init_RIGHT"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "init_RIGHT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "fwd_count"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "fwd_count"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "lr_count"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "lr_count"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "thresh_RIGHT"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "thresh_RIGHT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "thresh_LEFT"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "thresh_LEFT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_active_c2_MicroMouseTemplate_just_fw"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_c2_MicroMouseTemplate_just_fw"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_ButtonPressed"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ButtonPressed"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

@@ -1,0 +1,61 @@
+%implements s40_b0_vcb5o_0_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+/* {S!d9248}MATLABSystem: '<S51>/MATLAB System1' */
+/*@>6d675a*/if (/*@>6dd76a*/localDW->/*@>6dda36*/obj.InitialCondition/*@>6d6750*/ != /*@>6dd6f4*/localP->/*@>6dda30*/MATLABSystem1_InitialCondition) {
+    /*@>6dd771*/localDW->/*@>6dda39*/obj./*@>6dda18*/InitialCondition/*@>6d6751*/ = /*@>6dd6fb*/localP->/*@>6dda33*/MATLABSystem1_InitialCondition;
+}
+/*  Number of inputs */
+/*  Number of outputs */
+/*  Output the current state of the buffer */
+/*@[1*/
+/*@>6dd4ea*/memcpy(&/*@>6dd6c8*/localB->/*@>6dda24*/MATLABSystem1/*@>6dd36b*/[/*@>6dd35a*/0], &/*@>6dd778*/localDW->/*@>6dda3c*/obj./*@>6dda21*/Buffer[0], /*@>6dd369*/25U/*@>6dd37c*/ * /*@>6dd37b*/sizeof(real_T));
+/*@]*/
+/*  Update the buffer */
+/*@>6dd6d6*/localB->/*@>6dda27*/rtu_0/*@>6dba99*/[/*@>6dc4ad*/0]/*@>6dbaa0*/ = /*@>6dc4a4*/rtu_0;
+/*@[2*/
+/*@>6dd4ec*/memcpy(&/*@>6dd6dd*/localB->/*@>6dda2a*/rtu_0/*@>6dd30f*/[/*@>6dd2de*/1], &/*@>6dd77f*/localDW->/*@>6dda3f*/obj./*@>6dda1e*/Buffer[0], /*@>6dd30d*/24U/*@>6dd320*/ * /*@>6dd31f*/sizeof(real_T));
+/*@]*/
+/*@[3*/
+/*@>6dd4ee*/memcpy(&/*@>6dd786*/localDW->/*@>6dda42*/obj./*@>6dda1b*/Buffer[0], &/*@>6dd6e4*/localB->/*@>6dda2d*/rtu_0/*@>6dd2f9*/[/*@>6dd2d0*/0], /*@>6dd2ed*/25U/*@>6dd2fc*/ * /*@>6dd2fb*/sizeof(real_T));
+/*@]*/
+/* {E!d9248}End of MATLABSystem: '<S51>/MATLAB System1' */
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[0].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(0, 1, 0)>
+%endif
+%if SLibCG_ArgAccessed(0, 1, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(0, 1, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void MicroMouseTem_MATLABSystem1(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(0, 1, 0)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%<SLibUpdateSymbolForFunction("MicroMouseTem_MATLABSystem1", SLibGetFcnDefinitionRTMSymbolName(), TLC_FALSE)>\
+%endif
+%<comma>real_T rtu_0\
+%assign comma = ", "
+%<comma>B_MATLABSystem1_MicroMouseTem_T *localB\
+%assign comma = ", "
+%<comma>DW_MATLABSystem1_MicroMouseTe_T *localDW\
+%assign comma = ", "
+%<comma>P_MATLABSystem1_MicroMouseTem_T *localP\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 1, fcnProtoType)>
+%endfunction

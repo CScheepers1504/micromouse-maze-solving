@@ -1,0 +1,2 @@
+syscalls.o: \
+ C:/Users/CHRISS~1/ONEDRI~1/2024/EEE3097S/MicroMouseProgramming/STM32CubeIDE/Application/User/Core/instrumented/syscalls.c

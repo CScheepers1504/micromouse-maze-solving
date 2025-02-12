@@ -1,0 +1,52 @@
+%implements s44_b0_l5reo_1_SystemInitialize "C"
+
+%function SystemInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+int32_T i;
+%closefile localVarDecl
+/* {S!d408}Start for MATLABSystem: '<S59>/MATLAB System1' */
+%<SLibCG_DumpSSCode("/*@[6dfdc1*/",SLibCG_SetDWV(130, 0, 20, 1, "", -1, "", 0, "/*@>6dfe8e*/true"),"/*@]*/")>\
+/*@>6dfc1f*/localDW->/*@>6dfe4f*/obj./*@>6dfe46*/InitialCondition/*@>6d5fd1*/ = /*@>6dfbbb*/localP->/*@>6dfe4c*/MATLABSystem1_InitialCondition;
+/*@>6dfc26*/localDW->/*@>6dfe52*/obj./*@>6dfe43*/isInitialized/*@>6d5fce*/ = /*@>6dfdfa*/1;
+/*  Number of inputs */
+/*  Initialize the buffer during the first call */
+/*@>6ddead*/for (/*@>6dfe02*/i = /*@>6dfe01*/0; /*@>6dfe0c*/i < /*@>6dfe0a*/25; /*@>6dfe08*/i/*@>6dfe10*/++) {
+    /*@>6dfc2d*/localDW->/*@>6dfe55*/obj./*@>6dfe49*/Buffer/*@>6de7f6*/[/*@>6de944*/i]/*@>6ddea0*/ = /*@>6dfc34*/localDW->/*@>6dfe58*/obj.InitialCondition;
+}
+/* {E!d408}End of Start for MATLABSystem: '<S59>/MATLAB System1' */
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[1].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("SystemInitialize", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "SystemInitialize"))
+%<SLibCG_AccessArg(1, 0, 0)>
+%endif
+%if SLibCG_ArgAccessed(1, 0, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "SystemInitialize", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "SystemInitialize"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(1, 0, 0)>
+%endif
+%<LibSetSystemField(system, "CachedSystemInitializeLocalVars", localVarDecl)>
+%endfunction
+%function SystemInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void MicroMou_MATLABSystem1_Init(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(1, 0, 0)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%<SLibUpdateSymbolForFunction("MicroMou_MATLABSystem1_Init", SLibGetFcnDefinitionRTMSymbolName(), TLC_FALSE)>\
+%endif
+%<comma>DW_MATLABSystem1_MicroMouseTe_T *localDW\
+%assign comma = ", "
+%<comma>P_MATLABSystem1_MicroMouseTem_T *localP\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(1, 0, fcnProtoType)>
+%endfunction

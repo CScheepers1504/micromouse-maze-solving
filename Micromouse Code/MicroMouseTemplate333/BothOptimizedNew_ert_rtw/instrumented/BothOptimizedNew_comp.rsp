@@ -1,0 +1,29 @@
+-I"C:/Users/Nang'alelwa/OneDrive - University of Cape Town/UCT 4th Year Courses/2nd Semester/EEE3098S/MicroMouseTemplate333"
+-IC:/ProgramData/MATLAB/SupportPackages/R2024b/toolbox/shared/supportpackages/stm32/include
+-I"C:/Users/Nang'alelwa/OneDrive - University of Cape Town/UCT 4th Year Courses/2nd Semester/EEE3098S/MicroMouseTemplate333/BothOptimizedNew_ert_rtw/instrumented"
+-I"C:/Users/Nang'alelwa/OneDrive - University of Cape Town/UCT 4th Year Courses/2nd Semester/EEE3098S/MicroMouseTemplate333/MicroMouseProgramming/Core/Inc"
+-I"C:/Users/Nang'alelwa/OneDrive - University of Cape Town/UCT 4th Year Courses/2nd Semester/EEE3098S/MicroMouseTemplate333/MicroMouseProgramming/Core/Src/instrumented"
+-I"C:/Program Files/MATLAB/R2024b/extern/include"
+-I"C:/Program Files/MATLAB/R2024b/simulink/include"
+-I"C:/Program Files/MATLAB/R2024b/rtw/c/src"
+-I"C:/Program Files/MATLAB/R2024b/rtw/c/src/ext_mode/common"
+-I"C:/Program Files/MATLAB/R2024b/rtw/c/ert"
+-I"C:/Program Files/MATLAB/R2024b/toolbox/target/shared/armcortexmbase/scheduler/include"
+-I"C:/Program Files/MATLAB/R2024b/toolbox/target/shared/armcortexmbase/xcp/include"
+-I"C:/Program Files/MATLAB/R2024b/rtw/c/src/ext_mode/serial"
+-I"C:/Program Files/MATLAB/R2024b/toolbox/target/shared/svd/common/include"
+-IC:/ProgramData/MATLAB/SupportPackages/R2024b/3P.instrset/cmsis.instrset/CMSIS/Core/Include
+-IC:/ProgramData/MATLAB/SupportPackages/R2024b/3P.instrset/cmsis_dsp.instrset/Include
+-IC:/ProgramData/MATLAB/SupportPackages/R2024b/3P.instrset/cmsis_dsp.instrset/Include/dsp
+-I"C:/Users/Nang'alelwa/OneDrive - University of Cape Town/UCT 4th Year Courses/2nd Semester/EEE3098S/MicroMouseTemplate_v2/MicroMouseProgramming/Drivers/STM32L4xx_HAL_Driver/Inc"
+-I"C:/Users/Nang'alelwa/OneDrive - University of Cape Town/UCT 4th Year Courses/2nd Semester/EEE3098S/MicroMouseTemplate_v2/MicroMouseProgramming/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy"
+-I"C:/Users/Nang'alelwa/OneDrive - University of Cape Town/UCT 4th Year Courses/2nd Semester/EEE3098S/MicroMouseTemplate_v2/MicroMouseProgramming/Middlewares/ST/STM32_USB_Device_Library/Core/Inc"
+-I"C:/Users/Nang'alelwa/OneDrive - University of Cape Town/UCT 4th Year Courses/2nd Semester/EEE3098S/MicroMouseTemplate_v2/MicroMouseProgramming/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc"
+-I"C:/Users/Nang'alelwa/OneDrive - University of Cape Town/UCT 4th Year Courses/2nd Semester/EEE3098S/MicroMouseTemplate_v2/MicroMouseProgramming/Drivers/CMSIS/Device/ST/STM32L4xx/Include"
+-I"C:/Users/Nang'alelwa/OneDrive - University of Cape Town/UCT 4th Year Courses/2nd Semester/EEE3098S/MicroMouseTemplate_v2/MicroMouseProgramming/Drivers/CMSIS/Include"
+-I"C:/Users/Nang'alelwa/OneDrive - University of Cape Town/UCT 4th Year Courses/2nd Semester/EEE3098S/MicroMouseTemplate_v2/MicroMouseProgramming/Core/Inc"
+-I"C:/Users/Nang'alelwa/OneDrive - University of Cape Town/UCT 4th Year Courses/2nd Semester/EEE3098S/MicroMouseTemplate_v2/MicroMouseProgramming/USB_DEVICE/App"
+-I"C:/Users/Nang'alelwa/OneDrive - University of Cape Town/UCT 4th Year Courses/2nd Semester/EEE3098S/MicroMouseTemplate_v2/MicroMouseProgramming/USB_DEVICE/Target"
+-I../../Core/Inc
+-I../../USB_DEVICE/App
+-I../../USB_DEVICE/Target

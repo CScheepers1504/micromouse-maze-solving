@@ -1,0 +1,447 @@
+%implements s44_b0_l5reo_Functions "C"
+
+%function MicroMouseTempla_CrossDetection_Fcn0(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+boolean_T guard1;
+boolean_T leftClear;
+boolean_T rightClear;
+boolean_T tmp;
+boolean_T tmp_0;
+boolean_T tmp_1;
+boolean_T tmp_2;
+boolean_T wallAhead;
+guard1 = false;
+if ((/*@>721b12*/MicroMouseTemplate_DW./*@>728266*/crossroadCondition/*@>16d66*/ == /*@>6fc065*/3.0)/*@>1e799*/ || (/*@>721b18*/MicroMouseTemplate_DW./*@>728269*/crossroadCondition/*@>16d81*/ == /*@>6fc068*/5.0)) {
+    guard1 = true;
+} else if (/*@>721b1e*/MicroMouseTemplate_DW./*@>72826c*/crossroadCondition/*@>16d9c*/ == /*@>6fc06b*/4.0) {
+%<SLibCG_DumpSSCode("/*@[72585e*/",SLibCG_SetBOV(27, 0, 31, 1, "", -1, "", 0, "/*@>7282ee*/true"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[725880*/",SLibCG_SetBOV(34, 0, 31, 1, "", -1, "", 0, "/*@>728306*/true"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[7258a2*/",SLibCG_SetBOV(33, 0, 31, 1, "", -1, "", 0, "/*@>72831e*/true"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[7258c4*/",SLibCG_SetBOV(28, 0, 31, 1, "", -1, "", 0, "/*@>728336*/true"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[7258e6*/",SLibCG_SetBOV(31, 0, 31, 1, "", -1, "", 0, "/*@>72834e*/false"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[725908*/",SLibCG_SetBOV(32, 0, 31, 1, "", -1, "", 0, "/*@>728366*/false"),"/*@]*/")>\
+    /*@>721b48*/MicroMouseTemplate_DW./*@>728281*/temporalCounter_i1/*@>1690b*/ = /*@>728137*/0U;
+%<SLibCG_DumpSSCode("/*@[72572c*/",SLibCG_SetDWV(102, 0, 31, 1, "", -1, "", 0, "/*@>72837e*/MicroMouseTemplate_IN_turnBack"),"/*@]*/")>\
+    /*@>721010*/MicroMouseTemplate_B./*@>72824e*/leftWheel_p/*@>1aa88*/ = /*@>6fc12f*/-75.0;
+    /*@>721022*/MicroMouseTemplate_B./*@>728257*/rightWheel_o/*@>1aa89*/ = /*@>6fc117*/75.0;
+} else if (/*@>721b24*/MicroMouseTemplate_DW./*@>72826f*/crossroadCondition/*@>16db7*/ == /*@>6fc06e*/2.0) {
+%<SLibCG_DumpSSCode("/*@[72592a*/",SLibCG_SetBOV(27, 0, 31, 1, "", -1, "", 0, "/*@>728396*/true"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[72594c*/",SLibCG_SetBOV(34, 0, 31, 1, "", -1, "", 0, "/*@>7283ae*/true"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[72596e*/",SLibCG_SetBOV(33, 0, 31, 1, "", -1, "", 0, "/*@>7283c6*/true"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[725990*/",SLibCG_SetBOV(28, 0, 31, 1, "", -1, "", 0, "/*@>7283de*/true"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[7259b2*/",SLibCG_SetBOV(31, 0, 31, 1, "", -1, "", 0, "/*@>7283f6*/false"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[7259d4*/",SLibCG_SetBOV(32, 0, 31, 1, "", -1, "", 0, "/*@>72840e*/false"),"/*@]*/")>\
+    /*@>721b54*/MicroMouseTemplate_DW./*@>728287*/temporalCounter_i1/*@>16911*/ = /*@>72813d*/0U;
+%<SLibCG_DumpSSCode("/*@[72574e*/",SLibCG_SetDWV(102, 0, 31, 1, "", -1, "", 0, "/*@>728426*/MicroMouseTemplate_IN_turnRight"),"/*@]*/")>\
+    /*@>72101c*/MicroMouseTemplate_B./*@>728254*/leftWheel_p/*@>1aa9f*/ = /*@>6fc11a*/0.0;
+    /*@>72102e*/MicroMouseTemplate_B./*@>72825d*/rightWheel_o/*@>1aaa0*/ = /*@>6fc11d*/85.0;
+} else if (/*@>721b2a*/MicroMouseTemplate_DW./*@>728272*/crossroadCondition/*@>16dd2*/ == /*@>6fc071*/6.0) {
+    guard1 = true;
+} else if ((/*@>721b30*/MicroMouseTemplate_DW./*@>728275*/crossroadCondition/*@>16ded*/ == /*@>6fc074*/1.0)/*@>1e79a*/ || (/*@>721b36*/MicroMouseTemplate_DW./*@>728278*/crossroadCondition/*@>16e08*/ == /*@>6fc077*/7.0)) {
+%<SLibCG_DumpSSCode("/*@[7259f6*/",SLibCG_SetBOV(27, 0, 31, 1, "", -1, "", 0, "/*@>72843e*/true"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[725a18*/",SLibCG_SetBOV(34, 0, 31, 1, "", -1, "", 0, "/*@>728456*/true"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[725a3a*/",SLibCG_SetBOV(33, 0, 31, 1, "", -1, "", 0, "/*@>72846e*/true"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[725a5c*/",SLibCG_SetBOV(28, 0, 31, 1, "", -1, "", 0, "/*@>728486*/true"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[725a7e*/",SLibCG_SetBOV(31, 0, 31, 1, "", -1, "", 0, "/*@>72849e*/false"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[725aa0*/",SLibCG_SetBOV(32, 0, 31, 1, "", -1, "", 0, "/*@>7284b6*/false"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[725770*/",SLibCG_SetDWV(102, 0, 31, 1, "", -1, "", 0, "/*@>7284ce*/MicroMouseTemplate_IN_Driving"),"/*@]*/")>\
+    /*@>721b6b*/MicroMouseTemplate_DW./*@>72828d*/timer/*@>1aabc*/ = /*@>6fc120*/0.0;
+%<SLibCG_DumpSSCode("/*@[725ac2*/",SLibCG_SetDWV(103, 0, 31, 1, "", -1, "", 0, "/*@>7284e6*/MicroMouseTemplate_IN_Forward"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[725ae4*/",SLibCG_SetBOV(29, 0, 31, 1, "", -1, "", 0, "/*@>7284fe*/true"),"/*@]*/")>\
+    /*@>72103f*/MicroMouseTemplate_B./*@>728260*/leftWheel_p/*@>1aada*/ = /*@>721b88*/MicroMouseTemplate_DW./*@>728296*/normal_speed_LEFT;
+    /*@>721045*/MicroMouseTemplate_B./*@>728263*/rightWheel_o/*@>1aadc*/ = /*@>721b94*/MicroMouseTemplate_DW./*@>72829c*/normal_speed_RIGHT;
+} else {
+    /*@>6fc07a*/leftClear/*@>16ed2*/ = (*/*@<72817c*//*@>6fc133*/TmpRTBAtHelloMicroMouseInport5/*@>6e6393*/ <= /*@>720fe3*/MicroMouseTemplate_B./*@>728248*/thresh_LEFT);
+    /*@>6fc07e*/rightClear/*@>16ed6*/ = (*/*@<72817f*//*@>6fc137*/TmpRTBAtHelloMicroMouseInport6/*@>6e639b*/ <= /*@>720ff4*/MicroMouseTemplate_B./*@>72824b*/thresh_RIGHT);
+    /*@>6fc084*/wallAhead/*@>16edc*/ = ((*/*@<728182*//*@>6fc135*/TmpRTBAtHelloMicroMouseInport2/*@>16efc*/ > /*@>721b3c*/MicroMouseTemplate_DW./*@>72827b*/init_FWD_LEFT)/*@>1e79b*/ && (*/*@<728184*//*@>6fc139*/TmpRTBAtHelloMicroMouseInport8/*@>16efd*/ > /*@>721b42*/MicroMouseTemplate_DW./*@>72827e*/init_FWD_RIGHT));
+    /*@>711012*/tmp/*@>711014*/ = !/*@<16f00*//*@>6fc08a*/leftClear;
+    /*@>71101c*/tmp_0/*@>71101e*/ = !/*@<16eff*//*@>6fc088*/rightClear;
+    /*@>71102c*/tmp_1/*@>71102e*/ = !/*@<16efe*//*@>6fc086*/wallAhead;
+    /*@>16f17*/if (/*@>711030*/tmp_1/*@>1e79c*/ && /*@>711020*/tmp_0/*@>1e79d*/ && /*@>711016*/tmp) {
+        /*@>721b65*/MicroMouseTemplate_DW./*@>72828a*/crossroadCondition/*@>16ee1*/ = /*@>6fc090*/1.0;
+    } else {
+        /*@>711036*/tmp_2/*@>711038*/ = (tmp/*@>1e79e*/ && /*@>6fc091*/rightClear);
+        /*@>16f1d*/if (/*@>71103a*/tmp_2/*@>1e79f*/ && /*@>6fc093*/wallAhead) {
+            /*@>721b7c*/MicroMouseTemplate_DW./*@>728290*/crossroadCondition/*@>16ee5*/ = /*@>6fc099*/2.0;
+        } else /*@>16f23*/if (tmp_0/*@>1e7a0*/ && /*@>6fc09a*/wallAhead/*@>1e7a1*/ && /*@>6fc09c*/leftClear) {
+            /*@>721b82*/MicroMouseTemplate_DW./*@>728293*/crossroadCondition/*@>16ee9*/ = /*@>6fc0a2*/3.0;
+        } else /*@>16f29*/if (tmp/*@>1e7a2*/ && /*@>6fc0a3*/wallAhead/*@>1e7a3*/ && tmp_0) {
+            /*@>721b8e*/MicroMouseTemplate_DW./*@>728299*/crossroadCondition/*@>16eed*/ = /*@>6fc0ab*/4.0;
+        } else /*@>16f2f*/if (/*@>6fc0a7*/rightClear/*@>1e7a4*/ && /*@>6fc0ac*/leftClear/*@>1e7a5*/ && /*@>6fc0ae*/wallAhead) {
+            /*@>721b9a*/MicroMouseTemplate_DW./*@>72829f*/crossroadCondition/*@>16ef1*/ = /*@>6fc0b4*/5.0;
+        } else /*@>16f35*/if (/*@>6fc0b0*/leftClear/*@>1e7a6*/ && tmp_0/*@>1e7a7*/ && tmp_1) {
+            /*@>721ba0*/MicroMouseTemplate_DW./*@>7282a2*/crossroadCondition/*@>16ef5*/ = /*@>6fc0bd*/6.0;
+        } else /*@>16f3b*/if (tmp_2/*@>1e7a9*/ && tmp_1) {
+            /*@>721ba6*/MicroMouseTemplate_DW./*@>7282a5*/crossroadCondition/*@>16ef9*/ = /*@>6fc0c4*/7.0;
+        }
+    }
+}
+if (guard1) {
+%<SLibCG_DumpSSCode("/*@[725792*/",SLibCG_SetBOV(27, 0, 31, 1, "", -1, "", 0, "/*@>728516*/true"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[7257b4*/",SLibCG_SetBOV(34, 0, 31, 1, "", -1, "", 0, "/*@>72852e*/true"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[7257d6*/",SLibCG_SetBOV(33, 0, 31, 1, "", -1, "", 0, "/*@>728546*/true"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[7257f8*/",SLibCG_SetBOV(28, 0, 31, 1, "", -1, "", 0, "/*@>72855e*/true"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[72581a*/",SLibCG_SetBOV(31, 0, 31, 1, "", -1, "", 0, "/*@>728576*/false"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[72583c*/",SLibCG_SetBOV(32, 0, 31, 1, "", -1, "", 0, "/*@>72858e*/false"),"/*@]*/")>\
+    /*@>721b4e*/MicroMouseTemplate_DW./*@>728284*/temporalCounter_i1/*@>16905*/ = /*@>72813a*/0U;
+%<SLibCG_DumpSSCode("/*@[72570a*/",SLibCG_SetDWV(102, 0, 31, 1, "", -1, "", 0, "/*@>7285a6*/MicroMouseTemplate_IN_turnLeft"),"/*@]*/")>\
+    /*@>721016*/MicroMouseTemplate_B./*@>728251*/leftWheel_p/*@>1aa5a*/ = /*@>6fc0fd*/85.0;
+    /*@>721028*/MicroMouseTemplate_B./*@>72825a*/rightWheel_o/*@>1aa5b*/ = /*@>6fc100*/0.0;
+}
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void MicroMouseTempla_CrossDetection(\
+%assign comma = ""
+%<comma>const uint16_T *TmpRTBAtHelloMicroMouseInport2\
+%assign comma = ", "
+%<comma>const uint16_T *TmpRTBAtHelloMicroMouseInport5\
+%assign comma = ", "
+%<comma>const uint16_T *TmpRTBAtHelloMicroMouseInport6\
+%assign comma = ", "
+%<comma>const uint16_T *TmpRTBAtHelloMicroMouseInport8\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(3, 0, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function MicroMouseTempla_ButtonPressed3_Fcn1(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign _modelSS = ""
+
+%if SLibCG_FcnCallArgAccessed(3,1,0,0)
+%<SLibCG_AccessArg(3 ,1, 0)>
+%endif
+%if SLibCG_FcnCallArgAccessed(3,1,0,1)
+%<SLibCG_AccessArg(3 ,1, 2)>
+%endif
+%if SLibCG_FcnCallArgAccessed(3,1,0,2)
+%<SLibCG_AccessArg(3 ,1, 3)>
+%endif
+%if SLibCG_FcnCallArgAccessed(3,1,0,3)
+%<SLibCG_AccessArg(3 ,1, 5)>
+%endif
+
+switch (%<(SLibCG_DWV(102, 0, 31, 1, "", -1, "", 0))>) {
+  case MicroMouseTem_IN_CrossDetection:
+/*@[6e265e*/
+    /*@[727ce4*/%<(SLibCGCallSubFcn("MicroMouseTempla_CrossDetection", ["TmpRTBAtHelloMicroMouseInport2", "TmpRTBAtHelloMicroMouseInport5", "TmpRTBAtHelloMicroMouseInport6", "TmpRTBAtHelloMicroMouseInport8"], 3, 1, 0))>/*@]*/;
+/*@]*/
+    break;
+  case MicroMouseTemplate_IN_Driving:
+    /* {S!d790}RateTransition generated from: '<Root>/HelloMicroMouse!' */
+    /*@>1a4ee*/if ((/*@>720edb*/MicroMouseTemplate_B./*@>7286f3*/TmpRTBAtHelloMicroMouseInport3/*@>6fcc1a*/ < (/*@>70a55a*/(uint32_T)/*@>720ee1*/MicroMouseTemplate_B./*@>7286f6*/thresh_DOWN_AVG/*@>6fcc24*/ << /*@>6fcc23*/16))/*@>6e5ce8*/ && (/*@>721a65*/MicroMouseTemplate_DW./*@>728735*/timer/*@>6e5cf0*/ >= /*@>6fbffc*/25.0)) {
+/*@>1a647*/        switch (/*@[725ba0*/%<(SLibCG_DWV(103, 0, 31, 1, "", -1, "", 0))>/*@]*/) {
+          case /*@>6fbf33*/MicroMouseTemplate_IN_Forward:
+%<SLibCG_DumpSSCode("/*@[725c8f*/",SLibCG_SetDWV(103, 0, 31, 1, "", -1, "", 0, "/*@>7287eb*/MicroMouseTe_IN_NO_ACTIVE_CHILD"),"/*@]*/")>\
+            break;
+          case /*@>6fbf34*/Micr_IN_Turning_Left_Adjustment:
+%<SLibCG_DumpSSCode("/*@[725c6d*/",SLibCG_SetDWV(103, 0, 31, 1, "", -1, "", 0, "/*@>728803*/MicroMouseTe_IN_NO_ACTIVE_CHILD"),"/*@]*/")>\
+            break;
+          case /*@>6fbf35*/Mic_IN_Turning_Right_Adjustment:
+%<SLibCG_DumpSSCode("/*@[725c4b*/",SLibCG_SetDWV(103, 0, 31, 1, "", -1, "", 0, "/*@>72881b*/MicroMouseTe_IN_NO_ACTIVE_CHILD"),"/*@]*/")>\
+            break;
+        }
+%<SLibCG_DumpSSCode("/*@[725bc3*/",SLibCG_SetDWV(102, 0, 31, 1, "", -1, "", 0, "/*@>728833*/MicroMouseTem_IN_CrossDetection"),"/*@]*/")>\
+        /*@>720efd*/MicroMouseTemplate_B./*@>7286f9*/leftWheel_p/*@>1a78f*/ = /*@>6fbf66*/0.0;
+        /*@>720f0e*/MicroMouseTemplate_B./*@>7286fc*/rightWheel_o/*@>1a791*/ = /*@>6fbf69*/0.0;
+%<SLibCG_DumpSSCode("/*@[725de3*/",SLibCG_SetBOV(36, 0, 31, 1, "", -1, "", 0, "/*@>72884b*/true"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[725e05*/",SLibCG_SetBOV(29, 0, 31, 1, "", -1, "", 0, "/*@>728863*/true"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[725e27*/",SLibCG_SetBOV(30, 0, 31, 1, "", -1, "", 0, "/*@>72887b*/true"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[725e49*/",SLibCG_SetBOV(27, 0, 31, 1, "", -1, "", 0, "/*@>728893*/true"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[725e6b*/",SLibCG_SetBOV(34, 0, 31, 1, "", -1, "", 0, "/*@>7288ab*/true"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[725e8d*/",SLibCG_SetBOV(33, 0, 31, 1, "", -1, "", 0, "/*@>7288c3*/true"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[725eaf*/",SLibCG_SetBOV(28, 0, 31, 1, "", -1, "", 0, "/*@>7288db*/true"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[725ed1*/",SLibCG_SetBOV(31, 0, 31, 1, "", -1, "", 0, "/*@>7288f3*/true"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[725ef3*/",SLibCG_SetBOV(32, 0, 31, 1, "", -1, "", 0, "/*@>72890b*/true"),"/*@]*/")>\
+    } else {
+        /*@>721a7d*/MicroMouseTemplate_DW./*@>728741*/timer/*@>728603*/++;
+/*@>1a4f1*/        switch (/*@[725b7f*/%<(SLibCG_DWV(103, 0, 31, 1, "", -1, "", 0))>/*@]*/) {
+          case /*@>6fbf0f*/MicroMouseTemplate_IN_Forward:
+            /*@>1a6a7*/if (*/*@<72860a*//*@>6fc005*/TmpRTBAtHelloMicroMouseInport4/*@>1a6d0*/ > /*@>721aa6*/MicroMouseTemplate_DW./*@>72874d*/thresh_DOWN_LEFT) {
+%<SLibCG_DumpSSCode("/*@[725f7b*/",SLibCG_SetBOV(29, 0, 31, 1, "", -1, "", 0, "/*@>728923*/false"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[725d17*/",SLibCG_SetDWV(103, 0, 31, 1, "", -1, "", 0, "/*@>72893b*/Mic_IN_Turning_Right_Adjustment"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[725fe1*/",SLibCG_SetBOV(30, 0, 31, 1, "", -1, "", 0, "/*@>728953*/true"),"/*@]*/")>\
+                /*@>720f38*/MicroMouseTemplate_B./*@>728711*/leftWheel_p/*@>1a8d3*/ = /*@>6fbfb4*/75.0;
+                /*@>720f50*/MicroMouseTemplate_B./*@>72871d*/rightWheel_o/*@>1a8d4*/ = /*@>6fbfb7*/70.0;
+            } else /*@>1a6aa*/if (*/*@<72860c*//*@>6fc013*/TmpRTBAtHelloMicroMouseInport7/*@>1a6d5*/ > /*@>721abe*/MicroMouseTemplate_DW./*@>728759*/thresh_DOWN_RIGHT) {
+%<SLibCG_DumpSSCode("/*@[725fbf*/",SLibCG_SetBOV(29, 0, 31, 1, "", -1, "", 0, "/*@>72896b*/false"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[725d39*/",SLibCG_SetDWV(103, 0, 31, 1, "", -1, "", 0, "/*@>728983*/Micr_IN_Turning_Left_Adjustment"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[726025*/",SLibCG_SetBOV(36, 0, 31, 1, "", -1, "", 0, "/*@>72899b*/true"),"/*@]*/")>\
+                /*@>720f4a*/MicroMouseTemplate_B./*@>72871a*/rightWheel_o/*@>1a8f9*/ = /*@>6fbfc6*/75.0;
+                /*@>720f6e*/MicroMouseTemplate_B./*@>72872c*/leftWheel_p/*@>1a8fa*/ = /*@>6fbfc9*/70.0;
+            }
+            break;
+          case /*@>6fbf10*/Micr_IN_Turning_Left_Adjustment:
+            /*@>1a6e6*/if (*/*@<72860e*//*@>6fc007*/TmpRTBAtHelloMicroMouseInport4/*@>1a70f*/ > /*@>721aac*/MicroMouseTemplate_DW./*@>728750*/thresh_DOWN_LEFT) {
+%<SLibCG_DumpSSCode("/*@[725f9d*/",SLibCG_SetBOV(36, 0, 31, 1, "", -1, "", 0, "/*@>7289b3*/false"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[725d5b*/",SLibCG_SetDWV(103, 0, 31, 1, "", -1, "", 0, "/*@>7289cb*/Mic_IN_Turning_Right_Adjustment"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[726003*/",SLibCG_SetBOV(30, 0, 31, 1, "", -1, "", 0, "/*@>7289e3*/true"),"/*@]*/")>\
+                /*@>720f3e*/MicroMouseTemplate_B./*@>728714*/leftWheel_p/*@>1a8e6*/ = /*@>6fbfbd*/75.0;
+                /*@>720f5c*/MicroMouseTemplate_B./*@>728723*/rightWheel_o/*@>1a8e7*/ = /*@>6fbfc0*/70.0;
+            } else /*@>1a6e9*/if ((*/*@<728637*//*@>6fc015*/TmpRTBAtHelloMicroMouseInport7/*@>6e5d06*/ < /*@>721ac4*/MicroMouseTemplate_DW./*@>72875c*/thresh_DOWN_RIGHT)/*@>6e5d05*/ && (*/*@<728639*//*@>6fc00b*/TmpRTBAtHelloMicroMouseInport4/*@>6e5d0d*/ < /*@>721aca*/MicroMouseTemplate_DW./*@>72875f*/thresh_DOWN_LEFT)) {
+%<SLibCG_DumpSSCode("/*@[726069*/",SLibCG_SetBOV(36, 0, 31, 1, "", -1, "", 0, "/*@>7289fb*/false"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[725d7d*/",SLibCG_SetDWV(103, 0, 31, 1, "", -1, "", 0, "/*@>728a13*/MicroMouseTemplate_IN_Forward"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[7260cf*/",SLibCG_SetBOV(29, 0, 31, 1, "", -1, "", 0, "/*@>728a2b*/true"),"/*@]*/")>\
+                /*@>720f56*/MicroMouseTemplate_B./*@>728720*/leftWheel_p/*@>1a979*/ = /*@>721b00*/MicroMouseTemplate_DW./*@>72877a*/normal_speed_LEFT;
+                /*@>720f74*/MicroMouseTemplate_B./*@>72872f*/rightWheel_o/*@>1a97b*/ = /*@>721b0c*/MicroMouseTemplate_DW./*@>728780*/normal_speed_RIGHT;
+            }
+            break;
+          default:
+            /* case IN_Turning_Right_Adjustment: */
+            /*@>1a73d*/if ((*/*@<728633*//*@>6fc011*/TmpRTBAtHelloMicroMouseInport7/*@>6e5cf6*/ < /*@>721ab2*/MicroMouseTemplate_DW./*@>728753*/thresh_DOWN_RIGHT)/*@>6e5cf5*/ && (*/*@<728635*//*@>6fc009*/TmpRTBAtHelloMicroMouseInport4/*@>6e5cfd*/ < /*@>721ab8*/MicroMouseTemplate_DW./*@>728756*/thresh_DOWN_LEFT)) {
+%<SLibCG_DumpSSCode("/*@[726047*/",SLibCG_SetBOV(30, 0, 31, 1, "", -1, "", 0, "/*@>728a43*/false"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[725d9f*/",SLibCG_SetDWV(103, 0, 31, 1, "", -1, "", 0, "/*@>728a5b*/MicroMouseTemplate_IN_Forward"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[7260ad*/",SLibCG_SetBOV(29, 0, 31, 1, "", -1, "", 0, "/*@>728a73*/true"),"/*@]*/")>\
+                /*@>720f44*/MicroMouseTemplate_B./*@>728717*/leftWheel_p/*@>1a964*/ = /*@>721afa*/MicroMouseTemplate_DW./*@>728777*/normal_speed_LEFT;
+                /*@>720f68*/MicroMouseTemplate_B./*@>728729*/rightWheel_o/*@>1a966*/ = /*@>721b06*/MicroMouseTemplate_DW./*@>72877d*/normal_speed_RIGHT;
+            } else /*@>1a740*/if (*/*@<728610*//*@>6fc017*/TmpRTBAtHelloMicroMouseInport7/*@>1a783*/ > /*@>721ad0*/MicroMouseTemplate_DW./*@>728762*/thresh_DOWN_RIGHT) {
+%<SLibCG_DumpSSCode("/*@[72608b*/",SLibCG_SetBOV(30, 0, 31, 1, "", -1, "", 0, "/*@>728a8b*/false"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[725dc1*/",SLibCG_SetDWV(103, 0, 31, 1, "", -1, "", 0, "/*@>728aa3*/Micr_IN_Turning_Left_Adjustment"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[7260f1*/",SLibCG_SetBOV(36, 0, 31, 1, "", -1, "", 0, "/*@>728abb*/true"),"/*@]*/")>\
+                /*@>720f62*/MicroMouseTemplate_B./*@>728726*/rightWheel_o/*@>1a98d*/ = /*@>6fbfee*/75.0;
+                /*@>720f85*/MicroMouseTemplate_B./*@>728732*/leftWheel_p/*@>1a98e*/ = /*@>6fbff1*/70.0;
+            }
+            break;
+        }
+    }
+    /* {E!d790}End of RateTransition generated from: '<Root>/HelloMicroMouse!' */
+    break;
+  case MicroMouseTemplate_IN_turnBack:
+    /*@>1a53b*/if (/*@>721a6b*/MicroMouseTemplate_DW./*@>728738*/temporalCounter_i1/*@>1a552*/ >= /*@>6fbff2*/20U) {
+%<SLibCG_DumpSSCode("/*@[725be5*/",SLibCG_SetDWV(102, 0, 31, 1, "", -1, "", 0, "/*@>728ad3*/MicroMouseTemplate_IN_Driving"),"/*@]*/")>\
+        /*@>721a94*/MicroMouseTemplate_DW./*@>728744*/timer/*@>1a626*/ = /*@>6fbf2c*/0.0;
+%<SLibCG_DumpSSCode("/*@[725cb1*/",SLibCG_SetDWV(103, 0, 31, 1, "", -1, "", 0, "/*@>728aeb*/MicroMouseTemplate_IN_Forward"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[725f15*/",SLibCG_SetBOV(29, 0, 31, 1, "", -1, "", 0, "/*@>728b03*/true"),"/*@]*/")>\
+        /*@>720f14*/MicroMouseTemplate_B./*@>7286ff*/leftWheel_p/*@>1a81d*/ = /*@>721ad6*/MicroMouseTemplate_DW./*@>728765*/normal_speed_LEFT;
+        /*@>720f26*/MicroMouseTemplate_B./*@>728708*/rightWheel_o/*@>1a81f*/ = /*@>721ae8*/MicroMouseTemplate_DW./*@>72876e*/normal_speed_RIGHT;
+    }
+    break;
+  case MicroMouseTemplate_IN_turnLeft:
+    /*@>1a565*/if (/*@>721a71*/MicroMouseTemplate_DW./*@>72873b*/temporalCounter_i1/*@>1a57c*/ >= /*@>6fbff3*/20U) {
+%<SLibCG_DumpSSCode("/*@[725c07*/",SLibCG_SetDWV(102, 0, 31, 1, "", -1, "", 0, "/*@>728b1b*/MicroMouseTemplate_IN_Driving"),"/*@]*/")>\
+        /*@>721a9a*/MicroMouseTemplate_DW./*@>728747*/timer/*@>1a631*/ = /*@>6fbf2f*/0.0;
+%<SLibCG_DumpSSCode("/*@[725cd3*/",SLibCG_SetDWV(103, 0, 31, 1, "", -1, "", 0, "/*@>728b33*/MicroMouseTemplate_IN_Forward"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[725f37*/",SLibCG_SetBOV(29, 0, 31, 1, "", -1, "", 0, "/*@>728b4b*/true"),"/*@]*/")>\
+        /*@>720f1a*/MicroMouseTemplate_B./*@>728702*/leftWheel_p/*@>1a832*/ = /*@>721adc*/MicroMouseTemplate_DW./*@>728768*/normal_speed_LEFT;
+        /*@>720f2c*/MicroMouseTemplate_B./*@>72870b*/rightWheel_o/*@>1a834*/ = /*@>721aee*/MicroMouseTemplate_DW./*@>728771*/normal_speed_RIGHT;
+    }
+    break;
+  default:
+    /* case IN_turnRight: */
+    /*@>1a58f*/if (/*@>721a77*/MicroMouseTemplate_DW./*@>72873e*/temporalCounter_i1/*@>1a5a6*/ >= /*@>6fbff4*/20U) {
+%<SLibCG_DumpSSCode("/*@[725c29*/",SLibCG_SetDWV(102, 0, 31, 1, "", -1, "", 0, "/*@>728b63*/MicroMouseTemplate_IN_Driving"),"/*@]*/")>\
+        /*@>721aa0*/MicroMouseTemplate_DW./*@>72874a*/timer/*@>1a63c*/ = /*@>6fbf32*/0.0;
+%<SLibCG_DumpSSCode("/*@[725cf5*/",SLibCG_SetDWV(103, 0, 31, 1, "", -1, "", 0, "/*@>728b7b*/MicroMouseTemplate_IN_Forward"),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[725f59*/",SLibCG_SetBOV(29, 0, 31, 1, "", -1, "", 0, "/*@>728b93*/true"),"/*@]*/")>\
+        /*@>720f20*/MicroMouseTemplate_B./*@>728705*/leftWheel_p/*@>1a847*/ = /*@>721ae2*/MicroMouseTemplate_DW./*@>72876b*/normal_speed_LEFT;
+        /*@>720f32*/MicroMouseTemplate_B./*@>72870e*/rightWheel_o/*@>1a849*/ = /*@>721af4*/MicroMouseTemplate_DW./*@>728774*/normal_speed_RIGHT;
+    }
+    break;
+}
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void MicroMouseTempla_ButtonPressed3(\
+%assign comma = ""
+%<comma>const uint16_T *TmpRTBAtHelloMicroMouseInport2\
+%assign comma = ", "
+%<comma>const uint16_T *TmpRTBAtHelloMicroMouseInport4\
+%assign comma = ", "
+%<comma>const uint16_T *TmpRTBAtHelloMicroMouseInport5\
+%assign comma = ", "
+%<comma>const uint16_T *TmpRTBAtHelloMicroMouseInport6\
+%assign comma = ", "
+%<comma>const uint16_T *TmpRTBAtHelloMicroMouseInport7\
+%assign comma = ", "
+%<comma>const uint16_T *TmpRTBAtHelloMicroMouseInport8\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(3, 1, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function rt_roundd_Fcn2(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+real_T y;
+if (fabs(u) < 4.503599627370496E+15) {
+    if (u >= 0.5) {
+        y = floor(u + 0.5);
+    } else if (u > -0.5) {
+        y = 0.0;
+    } else {
+        y = ceil(u - 0.5);
+    }
+} else {
+    y = u;
+}
+return y;
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+extern real_T rt_roundd(\
+%assign comma = ""
+%<comma>real_T u\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(3, 2, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function MicroMous_PWMOutput_setupImpl_d_Fcn3(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+TIM_Type_T b;
+boolean_T isSlaveModeTriggerEnabled;
+/* {S!d798}Start for MATLABSystem: '<S54>/PWM Output' */
+/*@>6fc18f*/b./*@>728c0f*/PeripheralPtr/*@>401bc6*/ = /*@>6fc1aa*/TIM3;
+/*@>6fc18c*/b./*@>728c0c*/isCenterAlignedMode/*@>401bc2*/ = /*@>6fc193*/false;
+/* {S!d800}Start for MATLABSystem: '<S54>/PWM Output' */
+/*@>6fc189*/b./*@>728c09*/repetitionCounter/*@>401bbe*/ = /*@>728bcc*/0U;
+/*@[6e2665*/
+/*@>6fc1a0*/obj->/*@>728c12*/TimerHandle/*@>401bd5*/ = /*@>71a85b*/Timer_Handle_Init(&/*@>6fc1a2*/b);
+/*@]*/
+/*@[6e2666*/
+/*@>71a85d*/enableTimerInterrupts(/*@>6fc1a4*/obj->TimerHandle, /*@>70aaf5*/0);
+/*@]*/
+/*@[6e2667*/
+/*@>71a85f*/enableTimerChannel1(/*@>6fc180*/obj->TimerHandle, /*@>6fc1ab*/ENABLE_CH);
+/*@]*/
+/*@[6e2668*/
+/*@>71a861*/enableTimerChannel2(/*@>6fc183*/obj->TimerHandle, /*@>6fc1ac*/ENABLE_CH);
+/*@]*/
+/*@[6e2669*/
+/*@>6fc197*/isSlaveModeTriggerEnabled/*@>401c05*/ = /*@>71a863*/isSlaveTriggerModeEnabled(/*@>6fc1a6*/obj->TimerHandle);
+/*@]*/
+/*@>401c1a*/if (!/*@<401c10*//*@>6fc19a*/isSlaveModeTriggerEnabled) {
+    /* {S!d802}Start for MATLABSystem: '<S54>/PWM Output' */
+/*@[6e266a*/
+    /*@>71a865*/enableCounter(/*@>6fc1a8*/obj->TimerHandle, /*@>6fc19e*/false);
+/*@]*/
+}
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void MicroMous_PWMOutput_setupImpl_d(\
+%assign comma = ""
+%<comma>stm32cube_blocks_PWMOutput_Mi_T *obj\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(3, 3, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function MicroMouseT_PWMOutput_setupImpl_Fcn4(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+TIM_Type_T b;
+boolean_T isSlaveModeTriggerEnabled;
+/* {S!d792}Start for MATLABSystem: '<S52>/PWM Output' */
+/*@>6fc153*/b./*@>728c82*/PeripheralPtr/*@>3b9086*/ = /*@>6fc16e*/TIM3;
+/*@>6fc150*/b./*@>728c7f*/isCenterAlignedMode/*@>3b9082*/ = /*@>6fc157*/false;
+/* {S!d794}Start for MATLABSystem: '<S52>/PWM Output' */
+/*@>6fc14d*/b./*@>728c7c*/repetitionCounter/*@>3b907e*/ = /*@>728c3f*/0U;
+/*@[6e265f*/
+/*@>6fc164*/obj->/*@>728c85*/TimerHandle/*@>3b9095*/ = /*@>71a84f*/Timer_Handle_Init(&/*@>6fc166*/b);
+/*@]*/
+/*@[6e2660*/
+/*@>71a851*/enableTimerInterrupts(/*@>6fc168*/obj->TimerHandle, /*@>70aabe*/0);
+/*@]*/
+/*@[6e2661*/
+/*@>71a853*/enableTimerChannel3(/*@>6fc144*/obj->TimerHandle, /*@>6fc16f*/ENABLE_CH);
+/*@]*/
+/*@[6e2662*/
+/*@>71a855*/enableTimerChannel4(/*@>6fc147*/obj->TimerHandle, /*@>6fc170*/ENABLE_CH);
+/*@]*/
+/*@[6e2663*/
+/*@>6fc15b*/isSlaveModeTriggerEnabled/*@>3b90c5*/ = /*@>71a857*/isSlaveTriggerModeEnabled(/*@>6fc16a*/obj->TimerHandle);
+/*@]*/
+/*@>3b90da*/if (!/*@<3b90d0*//*@>6fc15e*/isSlaveModeTriggerEnabled) {
+    /* {S!d796}Start for MATLABSystem: '<S52>/PWM Output' */
+/*@[6e2664*/
+    /*@>71a859*/enableCounter(/*@>6fc16c*/obj->TimerHandle, /*@>6fc162*/false);
+/*@]*/
+}
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void MicroMouseT_PWMOutput_setupImpl(\
+%assign comma = ""
+%<comma>stm32cube_blocks_PWMOutput_Mi_T *obj\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(3, 4, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function MicroMouseTemp_SystemCore_setup_Fcn5(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+ADC_Type_T adcStructLoc;
+/*@>6fc1c3*/obj->/*@>728d11*/isSetupComplete/*@>42cf75*/ = /*@>6fc1cc*/false;
+/* Start for MATLABSystem: '<S58>/Analog to Digital Converter' */
+/*@>6fc1c6*/obj->/*@>728d14*/isInitialized/*@>42cf9c*/ = /*@>728cb1*/1;
+/*@[6e266b*/
+/*@>6fc20b*/adcStructLoc./*@>728d38*/InternalBufferPtr/*@>466b43*/ = /*@>71a867*/(void*)(&/*@>6fc1f2*/obj->/*@>728d35*/ADCInternalBuffer/*@>6f8ed4*/[/*@>6fc20e*/0]);
+/*@]*/
+/*@>6fc1de*/adcStructLoc./*@>728d29*/InjectedNoOfConversion/*@>4669c0*/ = /*@>728cb4*/0U;
+/*@>6fc1db*/adcStructLoc./*@>728d26*/peripheralPtr/*@>4669b8*/ = /*@>6fc1fc*/ADC2;
+/*@>6fc1d8*/adcStructLoc./*@>728d23*/dmaPeripheralPtr/*@>4669b4*/ = /*@>6fc1fd*/DMA1;
+/*@>6fc1d5*/adcStructLoc./*@>728d20*/dmastream/*@>4669b0*/ = /*@>6fc1fe*/LL_DMA_CHANNEL_2;
+/*@>6fc1d2*/adcStructLoc./*@>728d1d*/DataTransferMode/*@>4669ac*/ = /*@>6fc1ff*/ADC_DR_TRANSFER;
+/*@>6fc1cf*/adcStructLoc./*@>728d1a*/DmaTransferMode/*@>4669a8*/ = /*@>6fc200*/ADC_DMA_TRANSFER_UNLIMITED;
+/*@>6fc1e0*/adcStructLoc./*@>728d2c*/InternalBufferSize/*@>4669f0*/ = /*@>6fc206*/9U;
+/*@>6fc1e3*/adcStructLoc./*@>728d2f*/RegularNoOfConversion/*@>4669fd*/ = /*@>728cb7*/9U;
+/*@[6e266c*/
+/*@>6fc1f4*/obj->/*@>728d32*/ADCHandle/*@>466a0a*/ = /*@>71a869*/ADC_Handle_Init(&/*@>6fc1e7*/adcStructLoc, /*@>6fc201*/ADC_DMA_INTERRUPT_MODE, /*@>70ab26*/1, /*@>6fc202*/ADC_TRIGGER_AND_READ, /*@>6fc203*/LL_ADC_REG_SEQ_SCAN_ENABLE_9RANKS);
+/*@]*/
+/*@[6e266d*/
+/*@>71a86b*/enableADCAutomaticCalibrationOffset(/*@>6fc1f6*/obj->ADCHandle, /*@>70ab2a*/2);
+/*@]*/
+/*@[6e266e*/
+/*@>71a86d*/enableADC(/*@>6fc1f8*/obj->ADCHandle);
+/*@]*/
+/*@[6e266f*/
+/*@>71a86f*/startADCConversionForExternalTrigger(/*@>6fc1fa*/obj->ADCHandle, /*@>70ab2f*/1);
+/*@]*/
+/*@>6fc1c9*/obj->/*@>728d17*/isSetupComplete/*@>42d01c*/ = /*@>6fc1cd*/true;
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void MicroMouseTemp_SystemCore_setup(\
+%assign comma = ""
+%<comma>stm32cube_blocks_AnalogInput__T *obj\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(3, 5, fcnProtoType)>
+%return fcnBuff
+%endfunction
+

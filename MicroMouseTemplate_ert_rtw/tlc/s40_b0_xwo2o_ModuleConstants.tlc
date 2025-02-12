@@ -1,0 +1,22 @@
+%implements s40_b0_xwo2o_ModuleConstants "C"
+
+%function ModuleConstants(block) Output
+
+
+/* Named constants for Chart: '<Root>/HelloMicroMouse!' */
+#define Mic_IN_Turning_Right_Adjustment ((uint8_T)3U)
+#define Micr_IN_Turning_Left_Adjustment ((uint8_T)2U)
+#define Micr_IN_WaitUntilButtonPressed5 ((uint8_T)6U)
+#define MicroMou_IN_Calibration_Forward ((uint8_T)3U)
+#define MicroMouseT_IN_Calibration_Down ((uint8_T)2U)
+#define MicroMouseTe_IN_NO_ACTIVE_CHILD ((uint8_T)0U)
+#define MicroMouseTem_IN_ButtonPressed3 ((uint8_T)1U)
+#define MicroMouseTem_IN_CrossDetection ((uint8_T)1U)
+#define MicroMouseTemplate_IN_Driving ((uint8_T)2U)
+#define MicroMouseTemplate_IN_Forward ((uint8_T)1U)
+#define MicroMouseTemplate_IN_Ready1 ((uint8_T)5U)
+#define MicroMouseTemplate_IN_turnBack ((uint8_T)3U)
+#define MicroMouseTemplate_IN_turnLeft ((uint8_T)4U)
+#define MicroMouseTemplate_IN_turnRight ((uint8_T)5U)
+#define MicroMouse_IN_Calibration_Sides ((uint8_T)4U)
+%endfunction

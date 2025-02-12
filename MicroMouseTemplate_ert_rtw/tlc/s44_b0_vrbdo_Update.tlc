@@ -1,0 +1,96 @@
+%implements s44_b0_vrbdo_Update "C"
+
+%function UpdateForTID(block, system, tid) Output
+%if tid == 0
+%assign ::GlobalCurrentTID = 0
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%<SLibCGIRDumpSystemUserCode(31, "Update", "Header")>\
+%<SLibCGIRDumpSystemUserCode(31, "Update", "Body")>\
+/* Update for TransportDelay: '<S4>/Transport Delay' */
+/*@[6ddc4d*/
+                            {
+        real_T **uBuffer = (real_T**)&/*@>71c1b0*/MicroMouseTemplate_DW./*@>71c1af*/TransportDelay_PWORK.TUbufferPtrs[0];
+
+        real_T simTime   = %<(LibGetT())>;
+
+
+
+
+
+            /*@>71c1a1*/MicroMouseTemplate_DW./*@>71c1a0*/TransportDelay_IWORK.Head = ((/*@>71c1a1*/MicroMouseTemplate_DW./*@>71c1a0*/TransportDelay_IWORK.Head < (/*@>71c1a1*/MicroMouseTemplate_DW./*@>71c1a0*/TransportDelay_IWORK.CircularBufSize-1)) ? (/*@>71c1a1*/MicroMouseTemplate_DW./*@>71c1a0*/TransportDelay_IWORK.Head+1) : 0);
+
+            if (/*@>71c1a1*/MicroMouseTemplate_DW./*@>71c1a0*/TransportDelay_IWORK.Head == /*@>71c1a1*/MicroMouseTemplate_DW./*@>71c1a0*/TransportDelay_IWORK.Tail) {
+
+                    /*@>71c1a1*/MicroMouseTemplate_DW./*@>71c1a0*/TransportDelay_IWORK.Tail = ((/*@>71c1a1*/MicroMouseTemplate_DW./*@>71c1a0*/TransportDelay_IWORK.Tail < (/*@>71c1a1*/MicroMouseTemplate_DW./*@>71c1a0*/TransportDelay_IWORK.CircularBufSize-1)) ? (/*@>71c1a1*/MicroMouseTemplate_DW./*@>71c1a0*/TransportDelay_IWORK.Tail+1) : 0);
+            }
+
+            (*uBuffer + /*@>71c1a1*/MicroMouseTemplate_DW./*@>71c1a0*/TransportDelay_IWORK.CircularBufSize)[/*@>71c1a1*/MicroMouseTemplate_DW./*@>71c1a0*/TransportDelay_IWORK.Head] = simTime;
+                (*uBuffer)[/*@>71c1a1*/MicroMouseTemplate_DW./*@>71c1a0*/TransportDelay_IWORK.Head] = /*@>71c192*/MicroMouseTemplate_B./*@>71c191*/Product2;
+    }
+
+/*@]*/
+/* Update for TransportDelay: '<S4>/Transport Delay1' */
+/*@[6ddc4e*/
+                            {
+        real_T **uBuffer = (real_T**)&/*@>71c202*/MicroMouseTemplate_DW./*@>71c201*/TransportDelay1_PWORK.TUbufferPtrs[0];
+
+        real_T simTime   = %<(LibGetT())>;
+
+
+
+
+
+            /*@>71c1f3*/MicroMouseTemplate_DW./*@>71c1f2*/TransportDelay1_IWORK.Head = ((/*@>71c1f3*/MicroMouseTemplate_DW./*@>71c1f2*/TransportDelay1_IWORK.Head < (/*@>71c1f3*/MicroMouseTemplate_DW./*@>71c1f2*/TransportDelay1_IWORK.CircularBufSize-1)) ? (/*@>71c1f3*/MicroMouseTemplate_DW./*@>71c1f2*/TransportDelay1_IWORK.Head+1) : 0);
+
+            if (/*@>71c1f3*/MicroMouseTemplate_DW./*@>71c1f2*/TransportDelay1_IWORK.Head == /*@>71c1f3*/MicroMouseTemplate_DW./*@>71c1f2*/TransportDelay1_IWORK.Tail) {
+
+                    /*@>71c1f3*/MicroMouseTemplate_DW./*@>71c1f2*/TransportDelay1_IWORK.Tail = ((/*@>71c1f3*/MicroMouseTemplate_DW./*@>71c1f2*/TransportDelay1_IWORK.Tail < (/*@>71c1f3*/MicroMouseTemplate_DW./*@>71c1f2*/TransportDelay1_IWORK.CircularBufSize-1)) ? (/*@>71c1f3*/MicroMouseTemplate_DW./*@>71c1f2*/TransportDelay1_IWORK.Tail+1) : 0);
+            }
+
+            (*uBuffer + /*@>71c1f3*/MicroMouseTemplate_DW./*@>71c1f2*/TransportDelay1_IWORK.CircularBufSize)[/*@>71c1f3*/MicroMouseTemplate_DW./*@>71c1f2*/TransportDelay1_IWORK.Head] = simTime;
+                (*uBuffer)[/*@>71c1f3*/MicroMouseTemplate_DW./*@>71c1f2*/TransportDelay1_IWORK.Head] = /*@>71c1e4*/MicroMouseTemplate_B./*@>71c1e3*/Product3;
+    }
+
+/*@]*/
+%<SLibCGIRDumpSystemUserCode(31, "Update", "Trailer")>\
+%closefile cfgTxt
+%<cfgTxt>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 2
+%assign ::GlobalCurrentTID = 2
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%<SLibCGIRDumpSystemUserCode(31, "Update", "Header")>\
+%<SLibCGIRDumpSystemUserCode(31, "Update", "Body")>\
+%<SLibCGIRDumpSystemUserCode(31, "Update", "Trailer")>\
+%closefile cfgTxt
+%<cfgTxt>
+%assign ::GlobalCurrentTID = []
+%endif
+%endfunction
+%function UpdateFcnProtoTypeForTID(block, system, tid) Output
+%if tid == 0
+%assign ::GlobalCurrentTID = 0
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Update0(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(3, 8, fcnProtoType)>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 2
+%assign ::GlobalCurrentTID = 2
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Update1(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(3, 9, fcnProtoType)>
+%assign ::GlobalCurrentTID = []
+%endif
+%endfunction

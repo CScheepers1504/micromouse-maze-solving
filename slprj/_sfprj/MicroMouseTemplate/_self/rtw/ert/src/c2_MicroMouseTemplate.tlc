@@ -1,0 +1,263 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   35 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "init_DOWN_L_LIGHT"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "init_DOWN_L_LIGHT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "thresh_DOWN_LEFT"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "thresh_DOWN_LEFT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "normal_speed_RIGHT"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "normal_speed_RIGHT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "init_DOWN_R_DARK"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "init_DOWN_R_DARK"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "init_DOWN_L_DARK"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "init_DOWN_L_DARK"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "thresh_DOWN_RIGHT"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "thresh_DOWN_RIGHT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "init_DOWN_R_LIGHT"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "init_DOWN_R_LIGHT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "normal_speed_LEFT"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "normal_speed_LEFT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "counter"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "counter"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "sum_FWD_LEFT"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "sum_FWD_LEFT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "sum_FWD_RIGHT"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "sum_FWD_RIGHT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "timer"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "timer"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "rightClear"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "rightClear"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "leftClear"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "leftClear"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "crossroadCondition"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "crossroadCondition"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "init_FWD_LEFT"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "init_FWD_LEFT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "init_FWD_RIGHT"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "init_FWD_RIGHT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "thresh_DOWN_AVG"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "thresh_DOWN_AVG"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "frontClear"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "frontClear"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "thresh_FWD_L"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "thresh_FWD_L"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "thresh_FWD_R"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "thresh_FWD_R"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "thresh_LEFT"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "thresh_LEFT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "thresh_RIGHT"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "thresh_RIGHT"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "init_LEFT_CLOSE"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "init_LEFT_CLOSE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "init_LEFT_FAR"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "init_LEFT_FAR"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "init_RIGHT_CLOSE"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "init_RIGHT_CLOSE"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "init_RIGHT_FAR"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "init_RIGHT_FAR"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "LEDtimer"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "LEDtimer"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "processDone"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "processDone"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "LEDtimer1"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "LEDtimer1"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_active_c2_MicroMouseTemplate"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_c2_MicroMouseTemplate"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_ButtonPressed3"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ButtonPressed3"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Driving"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ButtonPressed3.Driving"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction
